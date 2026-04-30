@@ -1,0 +1,349 @@
+body {
+  font-family: "Book Antiqua", Palatino, serif;
+  margin: 0;
+  background: linear-gradient(135deg, #fdf6f6, #ffffff);
+  color: #222;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #000;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 7px 11px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(to right, #fdf6f6, #ffffff);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* Products */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 25px;
+}
+
+/* Card (EXQUISITE STYLE) */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+
+  border: 1px solid rgba(0,0,0,0.04);
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.05),
+    0 10px 25px rgba(0,0,0,0.04);
+
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* Card hover (premium lift) */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08),
+    0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Card text spacing */
+.card-content h3 {
+  margin: 10px 0 5px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button (premium style) */
+.btn {
+  margin-top: auto;
+  padding: 10px;
+  background: #111;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  margin-top: 15px;
+}
+
+.btn-outline {
+  padding: 10px;
+  border: 1px solid #111;
+  color: #111;
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+/* ABOUT */
+.about {
+  padding: 40px;
+  text-align: center;
+}
+
+/* SERVICES */
+.services {
+  padding: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 30px;
+  text-align: center;
+}
+s
+.testimonial {
+  background: white;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 30px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.contact input, .contact button {
+  padding: 10px;
+}
+
+/* FLOATING WHATSAPP */
+.float-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* IMAGE BOX LUXURY STYLE */
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* zoom effect */
+.card:hover .img-box img {
+  transform: scale(1.1);
+}
+
+/* overlay tag */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* PREMIUM GALLERY STYLE */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* hover zoom */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* soft glow overlay */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
