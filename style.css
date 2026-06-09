@@ -87,41 +87,59 @@ nav a:hover {
   padding: 25px;
 }
 
-/* Card (EXQUISITE STYLE) */
+/* Card */
 .card {
   background: white;
   border-radius: 14px;
   padding: 12px;
-
   border: 1px solid rgba(0,0,0,0.04);
-
   box-shadow:
     0 4px 10px rgba(0,0,0,0.05),
     0 10px 25px rgba(0,0,0,0.04);
-
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
 }
 
-/* Card hover (premium lift) */
 .card:hover {
   transform: translateY(-8px) scale(1.02);
-
   box-shadow:
     0 10px 25px rgba(0,0,0,0.08),
     0 20px 40px rgba(0,0,0,0.05);
 }
 
-/* Image */
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+/* Image box */
+.img-box {
+  position: relative;
+  overflow: hidden;
   border-radius: 12px;
 }
 
-/* Card text spacing */
+/* Product images */
+.img-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.card:hover .img-box img {
+  transform: scale(1.08);
+}
+
+/* Tag */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Card text */
 .card-content h3 {
   margin: 10px 0 5px;
 }
@@ -131,7 +149,7 @@ nav a:hover {
   color: #555;
 }
 
-/* Button (premium style) */
+/* Button */
 .btn {
   margin-top: auto;
   padding: 10px;
@@ -140,68 +158,6 @@ nav a:hover {
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
-  letter-spacing: 0.5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #333;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-/* 📱 MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero h2 {
-    font-size: 22px;
-  }
-
-  .card img {
-    height: 160px;
-  }
-}
-
-/* HERO BUTTONS */
-.hero-buttons {
-  margin-top: 15px;
-}
-
-.btn-outline {
-  padding: 10px;
-  border: 1px solid #111;
-  color: #111;
-  text-decoration: none;
-  margin-left: 10px;
-  border-radius: 8px;
-}
-
-/* ABOUT */
-.about {
-  padding: 40px;
-  text-align: center;
 }
 
 /* SERVICES */
@@ -223,12 +179,32 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* TESTIMONIALS */
+/* ONLY FIRST SERVICE IMAGE (Makeup Artistry) */
+.service-card:first-child img {
+  width: 100%;
+  max-width: 140px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* ALL OTHER SERVICE IMAGES (default size) */
+.service-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Testimonials */
 .testimonials {
   padding: 30px;
   text-align: center;
 }
-s
+
 .testimonial {
   background: white;
   margin: 10px auto;
@@ -237,7 +213,7 @@ s
   border-radius: 10px;
 }
 
-/* GALLERY */
+/* Gallery */
 .gallery {
   padding: 30px;
 }
@@ -248,12 +224,24 @@ s
   gap: 10px;
 }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-/* CONTACT */
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Contact */
 .contact {
   padding: 30px;
   text-align: center;
@@ -271,7 +259,7 @@ s
   padding: 10px;
 }
 
-/* FLOATING WHATSAPP */
+/* WhatsApp float */
 .float-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -284,66 +272,20 @@ s
   font-size: 20px;
 }
 
-/* IMAGE BOX LUXURY STYLE */
-.img-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.img-box img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-/* zoom effect */
-.card:hover .img-box img {
-  transform: scale(1.1);
-}
-
-/* overlay tag */
-.tag {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.7);
+/* Footer */
+footer {
+  background: #000;
   color: white;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 5px;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  font-size: 14px;
 }
-
-/* PREMIUM GALLERY STYLE */
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-/* hover zoom */
-.gallery-item:hover img {
-  transform: scale(1.08);
-}
-
-/* soft glow overlay */
-.gallery-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
-  opacity: 0;
+footer a {
+  color: #ccc;
+  text-decoration: none;
   transition: 0.3s;
 }
-
-.gallery-item:hover::after {
-  opacity: 1;
+footer a:hover {
+  color: white;
 }
